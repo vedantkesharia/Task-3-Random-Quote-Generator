@@ -1,0 +1,122 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family: 'Lugrasimo', cursive;
+}
+
+body{
+    background: #f3ebf3;
+}
+
+.container-box{
+    background-color: #fff;
+    width:700px;
+    position: absolute;
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+    padding: 40px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow:0 10px 20px 0px rgba(0,0,0,0.15);
+}
+
+.container-box h2{
+    font-size: 32px;
+    margin-bottom: 40px;
+    position: relative;
+}
+
+
+.container-box h2::after{
+content: '';
+width:82px;
+height:3px;
+border-radius: 3px;
+background: violet;
+position: absolute;
+bottom: -11px;
+left:50%;
+transform: translateX(-50%);
+}
+
+.container-box blockquote{
+    font-size: 26px;
+    min-height:110px;
+}
+
+.container-box blockquote::before, .container-box blockquote::after{
+    content: '"';
+
+}
+
+.container-box span{
+    display: block;
+    margin-top: 10px;
+    float: right;
+    position: relative;
+}
+
+.container-box span::before{
+    content: '';
+    width:21px;
+    height:2px;
+    background:violet;
+    position: absolute;
+    top:50%;
+    left:-30px;
+}
+
+.container-box div{
+    width:100%;
+    margin-top: 50px;
+    display: flex;
+    justify-content: center;
+}
+
+.container-box button{
+    background: violet;
+    color:#fff;
+    border-radius: 25px;
+    border: 1px solid violet;
+    width:150px;
+    height:50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    font-family: 'Roboto', sans-serif;
+}
+
+@media screen and (max-width: 768px) {
+    .container-box {
+      width: 90%;
+      padding: 20px;
+    }
+
+    .container-box h2 {
+      font-size: 24px;
+    }
+
+    .container-box blockquote {
+      font-size: 22px;
+      min-height: 90px;
+    }
+
+    /* .container-box span::before {
+      display: none;
+    } */
+
+    .container-box div {
+      margin-top: 50px;
+    }
+
+    .container-box button {
+      width: 120px;
+      height: 40px;
+      font-size: 14px;
+    }
+  }
